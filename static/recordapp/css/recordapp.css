@@ -1,0 +1,43 @@
+:root {
+  --gray: #636e72;
+  --dark-gray: #2d3436;
+  --light-gray: #b2bec3;
+  --x-light-gray: #dfe6e9;
+  --gradient: linear-gradient(#fdcb6e, #ffeaa7);
+}
+
+body {
+  background: var(--x-light-gray);
+  color: var(--gray);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  background: var(--dark-gray);
+  color: var(--light-gray);
+  padding: 1em;
+  border-radius: 0.5em;
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.26);
+}
+
+input,
+label {
+  cursor: pointer;
+}
+
+#viewaptients {
+  width: 500px;
+  margin: 50px;
+  padding: 50px;
+}
+
+/*# sourceMappingURL=recordapp.css.map */

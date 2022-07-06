@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block links %}
+<link rel="stylesheet" href=" {% static 'assets/css/details.css' %} " />
+<link
+{% endblock  %}
+{% block main %}
+<main class=" mt-4 pt-3">
+<div class="container address">
+  <div class="card">
+    <div class="card-header">
+      Add Address for patient with hospital Number: {{patient_det.hospitalNo}}
+    </div>
+    <div class="card-body">
+      <div class="container">
+        
+        <form method="POST" action="{{get_absolute_url_address}} ">
+          {% csrf_token %}
+          <div class="container-fluid border">
+
+            <div class="row mb-3 mt-3">
+              
+            <div class="col-md-6 ">
+                <label for="inputFirstName" class="form-label">Street No</label>
+                <div class="input-group flex-nowrap">
+                  <span class="input-group-text" id="addon-wrapping"><i class="bi bi-person-circle"></i></span>
+                  {{ patient_address.street_no }}
+                </div>
+              
+          </div>
+          <div class="col-md-6 ">
+              <label for="inputFirstName" class="form-label">Street Name</label>
+              <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping"><i class="bi bi-person-circle"></i></span>
+                {{ patient_address.street_name }}
+              </div>
+            
+        </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="inputFirstName" class="form-label">State</label>
+              <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping"><i class="bi bi-person-circle"></i></span>
+                {{ patient_address.state }}
+              </div>
+        
+            </div>
+            <div class="col-md-6">
+              <label for="inputMiddleName" class="form-label">LGA</label>
+              <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping"><i class="bi bi-person-circle"></i></span>
+                {{ patient_address.lga }}
+              </div>
+            </div>
+            
+          </div>
+           <div class="row mb-4">
+            <div class="col-md-6 mx-auto ">
+              <label for="inputLastName" class="form-label">City</label>
+              <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping"><i class="bi bi-person-circle"></i></span>
+                {{ patient_address.city }}
+              </div>
+              
+            </div>
+           </div>
+            
+            <div  class="row mb-3" >
+              <div class="col-4 d-grid gap-2" >
+                <a href="#" class="btn btn-block btn-secondary">Skip</a>
+              
+              </div>
+              <div class="col-4 d-grid gap-2" >
+                <button type="submit" class="btn btn-dark">Add Address</button>
+              </div>
+              <div class="col-4 d-grid gap-2" >
+                <a href="#" class="btn btn-block btn-secondary">Patient Profile</a>
+              
+              </div>
+            </div>
+          </div>
+          </div>  
+
+        </form>
+      </div>
+
+    </div>
+
+  
+ </div>
+</div>
+</main>
+{% endblock  %}
+{% block scripts %}
+<script src=" {% static 'js/datepicker.js' %} "></script>
+{% endblock  %}

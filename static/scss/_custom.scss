@@ -1,0 +1,11 @@
+
+// scss-docs-start color-variables
+$naf_blue: #2e3e64 ;
+$naf_sky_blue: #82d0ec;
+$naf_sky_blue1: #008ace;
+
+// scss-docs-start theme-color-variables
+$dark:$naf_blue ;
+
+//IMPORT BOOTSTRAP
+@import"../node_modules/bootstrap/scss/bootstrap.scss";

@@ -1,0 +1,109 @@
+
+$background-color: #D7CCC8;
+$font-family: 'Roboto', sans-serif;
+$btn-color:#FF5722;
+
+
+@mixin btn($fontcolor: #FAFAFA){
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  outline: 0;
+  border: 0;
+  width: 100%;
+  padding: 15px;
+  background: $btn-color;
+  color: $fontcolor;
+  text-transform: uppercase;
+}
+
+@mixin message($fontcolor: #90A4AE){
+  color: $fontcolor;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+
+@mixin input($bkgnd: #F5F5F5){
+  font-family: $font-family;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  outline: 0;
+  font-size: 15px;
+  text-align: center;
+  box-sizing: border-box;
+  background: $bkgnd;
+}
+
+.container-register{
+    padding: 0% 0 0;
+    width: 545px !important;
+    margin:  auto;
+  }
+.form-register{
+    position: relative;
+    z-index: 1;
+    max-width: 100%;
+    margin: 0 auto 10px;
+    padding: 5px;
+    background: #FFFFFF;
+  }
+
+.form-register {
+  input{
+    @include input; 
+    
+    ::placeholder {
+      color: #90A4AE;
+    }
+  }
+  
+  .btn{
+    @include btn;
+    
+  }
+  
+  .message {
+    @include message;
+    a {
+      text-decoration: none;
+      color: #00BFA5;
+    }
+  }
+}
+.form-register .form-label {
+  text-align: left !important; /* !important added for priority in SO snippet. */
+}
+main.register-form {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 4.5rem);
+  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../img/bg-masthead.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  
+}
+main.register-form h1, main.register-form .h1 {
+  font-size: 2.25rem;
+}
+@media (min-width: 992px) {
+  main.register-form {
+    height: 100vh;
+    min-height: 40rem;
+    padding-top: 4.5rem;
+    padding-bottom: 0;
+  }
+  main.register-form p {
+    font-size: 1.15rem;
+  }
+  main.register-form h1, main.register-form .h1 {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 1200px) {
+  main.register-form h1, main.register-form .h1 {
+    font-size: 3.5rem;
+  }
+}
